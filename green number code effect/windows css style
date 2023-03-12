@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Define colors */
+  :root {
+    --primary-color: #007aff;
+    --secondary-color: #f2f2f7;
+    --text-color: #333333;
+    --highlight-color: #ff3b30;
+  }
+  
+  /* Define global styles */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  /* Define the game board */
+  #game-container {
+    margin: 20px auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+  }
+  
+  /* Define the timer */
+  #timer {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  /* Define the game board */
+  #game-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  /* Define the puzzle piece */
+  .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Define the selected puzzle piece */
+  .tile.selected {
+    background-color: var(--highlight-color);
+    color: white;
+  }
+  
+  /* Define the solved puzzle piece */
+  .tile.solved {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Define media queries for responsive design */
+  @media screen and (max-width: 767px) {
+    #game-container {
+      margin: 10px;
+    }
+    
+    #game-board {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .tile {
+      font-size: 32px;
+      width: 83px;
+      height: 83px;
+    }
+  }

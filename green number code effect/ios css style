@@ -1,0 +1,95 @@
+/* Set up default font styles */
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set up game container */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* Set up game board */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Set up game tile */
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #d9d9d9;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Set up selected game tile */
+.tile.selected {
+  background-color: #007aff;
+  color: #fff;
+  border-color: #007aff;
+}
+
+/* Set up timer */
+#timer {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Set up timer display */
+#time-left {
+  font-weight: bold;
+  color: #007aff;
+}
+
+/* Set up button */
+button {
+  display: block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Set up button hover state */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Set up button disabled state */
+button[disabled] {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

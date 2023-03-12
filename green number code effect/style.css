@@ -1,0 +1,98 @@
+/* Set the background color */
+body {
+    background-image: url(https://images2.alphacoders.com/304/3042.png);
+    background-size: contain;
+  }
+  
+  /* Style the game container */
+  #game-container {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10%;
+  }
+  
+  /* Style the timer */
+  #timer {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style the game board */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  /* Style the tile */
+  .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    user-select: none;
+  }
+  
+  /* Style the selected tile */
+  .selected {
+    background-color: #ffcc80;
+  }
+  
+  /* Style the solved tile */
+  .solved {
+    background-color: #4caf50;
+    color: #ffffff;
+  }
+  
+  /* Style the congratulation message */
+  #congratulations {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Style the restart button */
+  #restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e53935;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Style the restart button on hover */
+  #restart-button:hover {
+    background-color: #c62828;
+  }
+  

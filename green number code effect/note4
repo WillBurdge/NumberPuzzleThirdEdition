@@ -1,0 +1,97 @@
+/* Set the background image */
+body {
+    background-image: url('https://images2.alphacoders.com/304/3042.png');
+    background-size: cover;
+  }
+  
+  /* Style the game container */
+  #game-container {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the timer */
+  #timer {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Style the game board */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Style the tile */
+  .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-weight: bold;
+    background-color: #e6f7ff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Style the selected tile */
+  .selected {
+    background-color: #d9e9ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the solved tile */
+  .solved {
+    background-color: #b5ffa5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the congratulation message */
+  #congratulations {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 72px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Style the restart button */
+  #restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Style the restart button on hover */
+  #restart-button:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  

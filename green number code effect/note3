@@ -1,0 +1,80 @@
+/* Define variables for reuse throughout the styles */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+/* Apply a modern, minimalistic style to the HTML document */
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+/* Style the game container */
+#game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the timer */
+#timer {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#time-left {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Style the game board */
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--light-color);
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.selected {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+/* Apply responsive design */
+@media (max-width: 768px) {
+  #game-board {
+    width: 200px;
+  }
+  .tile {
+    font-size: 1.5rem;
+  }
+}
